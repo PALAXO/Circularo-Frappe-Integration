@@ -1,0 +1,219 @@
+{
+ "creation": "2021-01-25 12:01:02.349792",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "target_docname",
+  "column_break_1",
+  "target_doctype",
+  "column_break_2",
+  "action",
+  "section_break_1",
+  "author",
+  "column_break_3",
+  "date",
+  "section_break_2",
+  "open_in_app",
+  "column_break_4",
+  "open_in_circularo",
+  "section_break_3",
+  "download_file",
+  "view_file",
+  "is_downloaded",
+  "target_document_id",
+  "target_url",
+  "circularo_preview_url",
+  "circularo_sign_url",
+  "is_sign",
+  "is_autosign",
+  "file_url"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:!doc.is_downloaded",
+   "fieldname": "download_file",
+   "fieldtype": "Button",
+   "label": "Download signed file"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_downloaded",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is downloaded",
+   "read_only": 1
+  },
+  {
+   "fieldname": "open_in_app",
+   "fieldtype": "Button",
+   "label": "Open document"
+  },
+  {
+   "fieldname": "open_in_circularo",
+   "fieldtype": "Button",
+   "label": "View in Circularo"
+  },
+  {
+   "fieldname": "target_doctype",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document type",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_docname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_document_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Target Document ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Target URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "circularo_preview_url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Circularo Preview URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "circularo_sign_url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Circularo Sign URL",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_autosign",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Autosign",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Author",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "Document"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break",
+   "label": "PDF File"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_sign",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Archive",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_downloaded",
+   "fieldname": "view_file",
+   "fieldtype": "Button",
+   "label": "View PDF file"
+  },
+  {
+   "fieldname": "file_url",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Document URL",
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-list",
+ "modified": "2021-01-28 15:34:19.980885",
+ "modified_by": "Administrator",
+ "module": "Circularo",
+ "name": "Circularo Documents",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "date",
+ "sort_order": "DESC",
+ "title_field": "target_docname",
+ "track_changes": 1
+}

@@ -1,0 +1,200 @@
+{
+ "creation": "2021-01-11 14:44:18.470497",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "section_view_settings",
+  "show_in_form_view",
+  "column_break_1",
+  "show_in_list_view",
+  "sectioin_doctype_settings",
+  "show_in_all_doctypes",
+  "show_in_single",
+  "show_in_doctypes",
+  "section_api_token",
+  "circularo_url",
+  "circularo_tenant",
+  "circularo_api_token",
+  "create_circularo_api_token",
+  "remove_circularo_api_token",
+  "signature_id",
+  "advanced_settings_section",
+  "advanced_settings",
+  "circularo_document_type",
+  "circularo_definition_type",
+  "circularo_workflow_type",
+  "send_to_email",
+  "restore_settings"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.circularo_api_token",
+   "fieldname": "circularo_url",
+   "fieldtype": "Data",
+   "label": "Circularo server URL",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.circularo_api_token",
+   "fieldname": "circularo_tenant",
+   "fieldtype": "Data",
+   "label": "Circularo tenant",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.circularo_api_token",
+   "fieldname": "circularo_api_token",
+   "fieldtype": "Data",
+   "label": "Circularo API Token",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.circularo_api_token",
+   "fieldname": "remove_circularo_api_token",
+   "fieldtype": "Button",
+   "label": "Remove Circularo API Token"
+  },
+  {
+   "depends_on": "eval:doc.enabled",
+   "fieldname": "section_view_settings",
+   "fieldtype": "Section Break",
+   "label": "View settings"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_in_form_view",
+   "fieldtype": "Check",
+   "label": "Show in Form view"
+  },
+  {
+   "default": "1",
+   "fieldname": "show_in_list_view",
+   "fieldtype": "Check",
+   "label": "Show in List view"
+  },
+  {
+   "depends_on": "eval:doc.enabled",
+   "fieldname": "section_api_token",
+   "fieldtype": "Section Break",
+   "label": "API Token"
+  },
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "depends_on": "eval:!doc.circularo_api_token",
+   "fieldname": "create_circularo_api_token",
+   "fieldtype": "Button",
+   "label": "Create Circularo API Token"
+  },
+  {
+   "depends_on": "eval:!doc.show_in_all_doctypes",
+   "fieldname": "show_in_doctypes",
+   "fieldtype": "Data",
+   "label": "Choose DocTypes (comma separated):"
+  },
+  {
+   "fieldname": "signature_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "show_in_all_doctypes",
+   "fieldtype": "Check",
+   "label": "Show for all DocTypes"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.show_in_all_doctypes",
+   "fieldname": "show_in_single",
+   "fieldtype": "Check",
+   "label": "Show in singleton DocTypes"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.enabled",
+   "fieldname": "sectioin_doctype_settings",
+   "fieldtype": "Section Break",
+   "label": "DocType settings"
+  },
+  {
+   "depends_on": "eval:doc.enabled",
+   "fieldname": "advanced_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Advanced settings"
+  },
+  {
+   "default": "d_default",
+   "depends_on": "eval:doc.advanced_settings",
+   "fieldname": "circularo_document_type",
+   "fieldtype": "Data",
+   "label": "Document type"
+  },
+  {
+   "default": "ext",
+   "depends_on": "eval:doc.advanced_settings",
+   "fieldname": "circularo_definition_type",
+   "fieldtype": "Data",
+   "label": "Definition type"
+  },
+  {
+   "default": "wf_archive",
+   "depends_on": "eval:doc.advanced_settings",
+   "fieldname": "circularo_workflow_type",
+   "fieldtype": "Data",
+   "label": "Workflow type"
+  },
+  {
+   "depends_on": "eval:doc.advanced_settings",
+   "fieldname": "restore_settings",
+   "fieldtype": "Button",
+   "label": "Restore settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "advanced_settings",
+   "fieldtype": "Check",
+   "label": "Show advanced settings"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.advanced_settings",
+   "fieldname": "send_to_email",
+   "fieldtype": "Check",
+   "label": "Send automatically signed documents to e-mail"
+  }
+ ],
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "modified": "2021-02-05 12:41:16.769085",
+ "modified_by": "Administrator",
+ "module": "Circularo",
+ "name": "Circularo Integration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include circularo *.css
+recursive-include circularo *.csv
+recursive-include circularo *.html
+recursive-include circularo *.ico
+recursive-include circularo *.js
+recursive-include circularo *.json
+recursive-include circularo *.md
+recursive-include circularo *.png
+recursive-include circularo *.py
+recursive-include circularo *.svg
+recursive-include circularo *.txt
+recursive-exclude circularo *.pyc
