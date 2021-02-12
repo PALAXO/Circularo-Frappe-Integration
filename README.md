@@ -1,5 +1,6 @@
-# Circularo-Frappe-Integration
-Example integration of open source DMS to Circularo esigning platform.
+# Circularo - ERPNext Integration
+Example integration of open source ERP system [ERPNext](https://erpnext.com/) to [Circularo e-signing platform](https://www.circularo.com/).
+
 
 ## Installation
 ```
